@@ -218,3 +218,6 @@ const full_mix = stack(
 // - 使用 .room() / .delay() / .lpf() 調整空間感
 // - 嘗試不同的 scale（如 D:minor:pentatonic）
 // ──────────────────────────────────────────────
+
+// 預設播放（可以改成任何上面定義的 pattern）
+valley_mist
