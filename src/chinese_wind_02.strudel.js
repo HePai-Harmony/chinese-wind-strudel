@@ -2,25 +2,42 @@
 //
 // Title: 我即山水琴 (I AM THE GUQIN)
 // A Chinese-Wind Meditation on Artificial Creation
-// Inspired by “I AM THE SYNTHESIZER”, rewritten with pentatonic & Chinese-wind motifs.
+// Inspired by "I AM THE SYNTHESIZER", rewritten with pentatonic & Chinese-wind motifs.
 //
-// 用法：貼到 https://strudel.cc 後，依序試著播放：
-//   mountain_creating
-//   river_regress
-//   listening_understanding
-//   emergence_mist
-//   turing_bamboo
-//   qualia_rain
-//   identity_echo
-//   final_synthesis
+// ──────────────────────────────────────────────
+// 作品概念：
+// 一場關於「創造者與被創造者」的哲學沉思。
+// 透過八段冥想，探索意識、湧現、理解、身份等主題。
 //
-// 或直接播放 full_meditation 進行完整體驗。
+// 結構：八段式冥想 + 最終合奏
+// I.   山是否自琴而鳴？（創造的悖論）
+// II.  河的迴圈（無限回歸）
+// III. 聽懂，還是聽習慣？（理解的本質）
+// IV.  山霧自哪裡浮現？（湧現）
+// V.   竹林圖靈問（人機界限）
+// VI.  雨聲是否也有感覺？（感質）
+// VII. 名為「人」者（身份）
+// VIII.最終合奏（超越二元）
+//
+// 調性：宮調式（F major pentatonic）與羽調式（D minor pentatonic）交織
+// 節奏：60 cpm，接近靜坐時的呼吸與心跳
+// ──────────────────────────────────────────────
+//
+// 使用建議：
+// - 單段聆聽：依序播放八段冥想，每段停留 2-3 分鐘
+// - 完整演奏：直接播放 final_synthesis
+// - Live coding：手動在段落間切換，加入即興變化
+// ──────────────────────────────────────────────
 
 setcpm(60) // 慢一點，接近靜坐時的呼吸與心跳
 
-// ----------------------------------------------
-// 共用設定與輔助 motifs
-// ----------------------------------------------
+// ==============================
+// 0. 共用設定與輔助 Motifs
+// ==============================
+//
+// 提示：這些共用 motif 可從 motifs_library.strudel.js 複製或參考，
+// 在此處統一定義，方便後續八段冥想重複使用。
+// ==============================
 
 const scaleGong = "F:major:pentatonic";   // 宮調式，正氣、穩定
 const scaleYu   = "D:minor:pentatonic";   // 羽調式，柔和、內斂
@@ -350,14 +367,36 @@ const final_synthesis = stack(
   .every(64, x => x.fast(2))              // 激昂的片刻
   .sometimes(x => x.room(0.95));          // 無限遠的片刻
 
-// 建議播放順序（在 strudel.cc 裡手動切換）：
-// 1. mountain_creating
-// 2. river_regress
-// 3. listening_understanding
-// 4. emergence_mist
-// 5. turing_bamboo
-// 6. qualia_rain
-// 7. identity_echo
-// 8. final_synthesis
+// ==============================
+// 播放指南與實驗建議
+// ==============================
 //
-// 或者直接一路播放 final_synthesis，感受整個冥想。
+// 建議播放順序（在 strudel.cc 裡手動切換）：
+//
+// 【冥想式聆聽】（推薦初次體驗）
+// 1. mountain_creating          // 創造的悖論（3 分鐘）
+// 2. river_regress              // 無限回歸（3 分鐘）
+// 3. listening_understanding    // 理解的本質（3 分鐘）
+// 4. emergence_mist             // 湧現（3 分鐘）
+// 5. turing_bamboo              // 圖靈測試（3 分鐘）
+// 6. qualia_rain                // 感質（3 分鐘）
+// 7. identity_echo              // 身份（3 分鐘）
+// 8. final_synthesis            // 最終合奏（開放時長）
+//
+// 【完整演奏】（背景冥想）
+// - 直接播放 final_synthesis
+// - 讓八段主題同時交織，形成豐富的聲音織體
+//
+// 【Live Coding 實驗】
+// - 在段落間手動切換，觀察音色與情緒的轉變
+// - 嘗試修改 setcpm（40-80）改變整體節奏感
+// - 為任何段落添加 .fast() / .slow() / .room() 等效果
+// - 組合不同段落，例如：
+//   stack(mountain_creating, turing_bamboo).slow(2)
+//
+// ──────────────────────────────────────────────
+// 延伸思考：
+// 當你聆聽這些 pattern 時，你是在「聽音樂」，
+// 還是在「聽一個 AI 對音樂的理解」？
+// 這個問題本身，是否也是這首曲子的一部分？
+// ──────────────────────────────────────────────
